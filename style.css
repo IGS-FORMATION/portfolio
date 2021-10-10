@@ -1,0 +1,438 @@
+
+  @keyframes fill {
+    0% {
+      width: 0%;
+      height: 1px;
+    }
+    50% {
+      width: 100%;
+      height: 1px;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+    }
+  }
+ 
+@keyframes fillColour {
+    0% {
+      color: #fff;
+    }
+    50% {
+      color: #fff;
+    }
+    100% {
+      color: #333;
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  html {
+      overflow: hidden;
+  }
+  
+  body {
+    overflow: hidden;
+    font-size: 100%;
+    background-image: url(portfolio/zack-woolwine-sYZ1TFtZ3Cw-unsplash.jpg);
+    background-size: 50%;
+  }
+  .flexons {
+      display: flex;
+  }
+  
+  nav {
+        top: 10vh;
+        bottom: 10vh;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        z-index: 100;
+        height: 80vh;
+        left: 0;
+        width: 20%;
+        font-weight: 300;
+        font-size: 1rem;
+  }
+  
+  nav em {
+      font-style: normal;
+      margin-left: 5px;
+      font-size: 14px;
+  }
+  
+  nav ul li i {
+      width: 25px;
+  }
+  
+  nav ul li a {
+      font-size: 18px;
+      
+  }
+  
+  nav .mini-logo {
+      display: none;
+  }
+  
+  nav .logo {
+      margin-top: 15px;
+      
+  }
+  
+  nav .logo img {
+      max-width: 60%;
+      overflow-y: hidden;
+  }
+  
+  nav ul {
+        margin-top: -30px;
+        text-align: left;
+        margin-left: 10px;
+        list-style-type: none;
+        height: 48vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+  }
+  nav ul li {
+      margin: 25px 0px;
+  }
+  nav a, nav a:active {
+    color: #fff;
+    border-radius: 1.5em;
+  }
+  nav a {
+      text-decoration: none!important;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      transition: color 2s, background 2s;
+      padding: 20px 30px;
+      position: relative;
+      z-index: 0;
+  }
+nav a::before {
+  content: "";
+  position: absolute;
+  height: 0%;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  z-index: -1;
+  border-radius: 1.5em;
+}
+nav a:hover {
+	text-decoration: none;
+    animation: fillColour 0.7s forwards ease-in-out;
+}
+/* animation lien */
+nav a:hover::before {
+  
+  animation: fill 0.7s forwards ease-in-out;
+  opacity: 1;
+  border-radius: 1.5em;
+}
+
+  .slides .slide {
+    height: 100vh;
+    width: 100vw;
+    float: left;
+    text-align: center;
+    background-size: cover;
+  }
+  .slides .slide .content {
+    overflow-y: scroll;
+    position: relative;
+    width: 70%;
+    height: 80%;
+    left: 30%;
+    top: 10%;
+    bottom: 10%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Gestion de slide */
+  .slides {
+    width: 600vw;
+    height: 100vh;
+    transition: transform 0.8s;
+    transition: transform 0.8s;
+  }
+  
+  .first-content {
+      padding: 100px;
+      text-align: left;
+      padding-top: 10%;
+  }
+  
+  .first-content .my-photo img {
+      
+      /* border-radius: 15px; */
+      border: 1px;
+      width: 250px;
+      height: 250px;
+      border-radius: 1em;
+      margin-top: 15px;
+      overflow: hidden;
+      float: left;
+      margin-right: 35px;
+  }
+  
+  .flex-right {
+      margin-left: 100px;
+  }
+  .first-content h2 {
+      font-size: 36px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      margin-top: 0px;
+  }
+  
+  .first-content p {
+      color: #fff;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 300;
+      letter-spacing: 2px;
+      line-height: 26px;
+      margin-bottom: 20px;
+  }
+  
+  .first-content em {
+      font-style: normal;
+      font-weight: 600;
+  }
+  
+
+  
+  .first-content a {
+      display: inline-block;
+      border: 2px solid #fff;
+      padding: 8px 15px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.5s;
+      transition: all 0.5s;
+  }
+  .first-content .fb-btn {
+	display: inline-block;
+}
+  
+  .first-content a {
+      display: inline-block;
+      background-color: #fff;
+      border: 2px solid #fff;
+      padding: 8px 15px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #232323;
+      text-decoration: none;
+      transition: all 0.5s;
+  }
+  
+  .first-content a:hover {
+      color: #fff;
+      background-color: transparent;
+  }
+  
+  
+  .second-content .container-fluid {
+      padding-right: 0px;
+      padding-left: 0px;
+  }
+  
+  .second-content .right-image img {
+      max-width: 100%;
+      min-width: 100%;
+      overflow: hidden;
+      float: right;
+  }
+  
+  .second-content .left-content {
+      padding: 60px;
+      text-align: left;
+  }
+  
+  .second-content h2 {
+      font-size: 36px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      margin-top: 0px;
+  }
+  
+  .second-content p {
+      font-size: 13px;
+      color: #fff;
+      letter-spacing: 0.5px;
+      font-weight: 300;
+      line-height: 24px;
+      margin-bottom: 30px;
+  }
+  
+  .second-content a {
+      color: #fff;
+      text-decoration: underline;
+  }
+  
+  .second-content a {
+      display: inline-block;
+      border: 2px solid #fff;
+      padding: 8px 15px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.5s;
+  }
+
+  .third-content, .fourth-content, .fifth-content{
+    color: #fff;
+  }
+  .slides .slide:nth-child(2){
+      background-image: url(portfolio/maPhoto.JPG);
+      background-size: 50%;
+  }
+.right-image img{
+    max-width: 150px;
+
+
+}
+
+.fourth-content .item img {
+	max-width: 100%;
+    max-height: 200px;
+	overflow: hidden;
+}
+
+.fourth-content .item .link-image {
+	position: relative;
+}
+
+.hover-effect {
+	position: absolute;
+	color: #fff;
+	background-color: rgba(0,0,0,0.95);
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	transition: all 0.8s;
+}
+
+.fourth-content .item:hover .hover-effect {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+
+
+  
+  /* REPONSIVE DESIGN*/
+  
+  @media (max-width: 991px) {
+  
+      nav ul {
+            margin-left: 25px;
+        }
+  
+  }
+  
+  @media (max-width: 749px) {
+  
+      nav {
+          width: 15vh;
+      }
+  
+      nav .logo {
+          display: none;
+      }
+  
+      nav .mini-logo {
+          margin-top: 20px;
+          display: block;
+      }
+      nav .mini-logo img
+      {
+        max-width: 90%;
+      }
+      nav ul {
+          text-align: center;
+          margin-left: 0px;
+      }
+  
+  
+      nav ul li em {
+          display: none;
+      }
+  
+      nav ul li i {
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+      }
+  
+      .first-content {
+          padding: 30px 5px;
+      }
+  
+      .second-content .left-content {
+          padding: 30px;
+          text-align: left;
+      }
+  
+  
+  }
+  
+  @media(max-width: 450px) {
+      .flexons {
+          display: inline-block;
+          flex-direction: column;
+          margin-right: 80px;
+      }
+      nav ul {
+          margin-top: 30px;
+          margin-left: -45px;
+      }
+      nav ul li {
+          margin: 10px 0px;
+      }
+      nav a {
+            padding: 15px 20px;
+      }
+     body{
+         background-image: url(portfolio/mohamad-alnaimi-LTmGin6Icmw-unsplash.jpg);
+     }
+     .slides .slide:nth-child(2){
+        background-image: url(portfolio/mohamad-alnaimi-LTmGin6Icmw-unsplash.jpg);
+    }
+     .first-content .my-photo img{
+         max-width: 100%;
+     }
+  }
