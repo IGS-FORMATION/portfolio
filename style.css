@@ -456,9 +456,9 @@ nav a:hover::before {
      }
 
      #contact {
-        margin-left:80px;
+        margin-left:50px;
         margin-top: 50px;
-         max-width: 50%; 
+         max-width: 100%; 
         
       }
   }
